@@ -2,7 +2,7 @@ import express from 'express';
 import http from 'node:http';
 import { createBareServer } from '@tomphttp/bare-server-node';
 import cors from 'cors';
-import path from "path";
+import path from "path"; 
 import { hostname } from "node:os"
 
 const server = http.createServer();
