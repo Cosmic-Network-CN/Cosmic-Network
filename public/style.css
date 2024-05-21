@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("/Icons/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+}
+
+.navbar #logo {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.adfixe {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.pname {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+.abttxt {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.proxy {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.hvr-bounce-in {
+    animation: bounce-in 0.5s ease-in-out;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.adfixe {
+    white-space: nowrap;
+    font-size: 120%;
+    width: 600px;
+    overflow-wrap: break-word;
+}
+
+.abttxt {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.movable-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
