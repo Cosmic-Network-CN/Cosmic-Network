@@ -64,7 +64,7 @@ body{
 }
 
 .btn::after{
-  content: 'about:blank';
+  content: 'Hover Me!';
   position: absolute;
   background-color: var(--bg-color);
   width: 96%;
