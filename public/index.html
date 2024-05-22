@@ -27,10 +27,46 @@
 </a>
 
  
-  <!-- about:blank button -->
+  <!-- start of about:blank button code -->
+
+
+<!-- Ensure the required CSS is linked in your main HTML -->
 <link rel="stylesheet" href="about-blank/a-b.css">
-<a href="#" class="btn" id="a-b-cloak" style="position: absolute; top: 20px; right: -1400px; height: 70px; width: 210px; font-size: 2px;">Button</a>
-<iframe id="myIframe" style="display:none;"></iframe>
+
+<!-- The button element -->
+<a href="#" class="btn" id="a:b-cloak" style="position: absolute; top: 20px; right: -1400px; height: 70px; width: 210px; font-size: 2px;">Button</a>
+
+<!-- The iframe element, initially hidden -->
+<iframe id="myIframe" style="display:none; width:400px; height:400px; border:none;"></iframe>
+
+<!-- The JavaScript code -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the iframe and the button
+        var iframe = document.getElementById("myIframe");
+        var button = document.getElementById("a:b-cloak");
+
+        // Add an event listener to the button
+        button.addEventListener("click", function(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+
+            // Get the current URL
+            var currentUrl = window.location.href;
+
+            // Show the iframe
+            iframe.style.display = "block";
+
+            // Open the new tab in the iframe
+            iframe.contentWindow.open(currentUrl, "about:blank", "width=400,height=400");
+            iframe.contentWindow.location.href = currentUrl;
+
+            // Switch the main tab to Google Classroom
+            window.top.location.href = "https://classroom.google.com/";
+        });
+    });
+</script>
+<!-- end of about:blank button code -->
 
 
 
