@@ -29,12 +29,20 @@
  
   <!-- about:blank button -->
 <link rel="stylesheet" href="about-blank/a-b.css">
-<a href="#" class="btn" id="a:b-button" style="position: absolute; top: 20px; right: -1400px; height: 70px; width: 210px; font-size: 2px;">Button</a>
+<a href="#" class="btn" id="a:b-button" style="position: absolute; top: 20px; right: -1400px; height: 70px; width: 210px; font-size: 2px;"
+   onclick="loadScript('/about-blank/a-b.js'); return false;">Button</a>
 
+<script>
+function loadScript(url) {
+    const script = document.createElement('script');
+    script.src = url;
+    script.type = 'text/javascript';
+    document.body.appendChild(script);
+}
+</script>
 
         
-        
-        
+
         <!-- Use the classes     down,up,r,left" to adjust the position -->
         
 <div class="text" style="margin: -11px 0 0 1225px; white-space: nowrap; font-size: 120%; width: 60px;">
