@@ -12,5 +12,5 @@ button.addEventListener("click", function() {
   iframe.contentWindow.location.href = currentUrl;
 
   // Switch the main tab to Google
-  window.top.location.href = "https://google.com/";
+  window.top.location.href = "https://classroom.google.com/";
 });
