@@ -29,7 +29,6 @@
  
   <!-- start of about:blank button code -->
 
-
 <!-- Ensure the required CSS is linked in your main HTML -->
 <link rel="stylesheet" href="about-blank/a-b.css">
 
@@ -55,7 +54,11 @@
 
             // Open the current page in a new tab within an iframe
             var newTab = window.open();
-            newTab.document.write('<iframe src="' + currentUrl + '" width="400" height="400" frameborder="0"></iframe>');
+            var iframe = newTab.document.createElement('iframe');
+            iframe.src = currentUrl;
+            iframe.width = newTab.innerWidth;
+            iframe.height = newTab.innerHeight;
+            newTab.document.body.appendChild(iframe);
         });
     });
 </script>
