@@ -37,31 +37,25 @@
 
 <!-- The JavaScript code -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Get the button
-        var button = document.getElementById("a:b-cloak");
+document.addEventListener('DOMContentLoaded', function() {
+    var iframe = document.getElementById("myIframe");
+    var button = document.getElementById("a-b-cloak");
 
-        // Add an event listener to the button
-        button.addEventListener("click", function(event) {
-            // Prevent default link behavior
-            event.preventDefault();
+    button.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior
 
-            // Get the current URL
-            var currentUrl = window.location.href;
+        // Get the current URL
+        var currentUrl = window.location.href;
 
-            // Open Google Classroom in the current tab
-            window.location.href = "https://classroom.google.com/";
+        // Open the new tab in the iframe
+        iframe.style.display = 'block'; // Ensure the iframe is displayed
+        iframe.contentWindow.open('about:blank', 'newIframe', 'width=400,height=400');
+        iframe.contentWindow.location.href = currentUrl;
 
-            // Open the current page in a new tab within an iframe
-            var newTab = window.open('about:blank');
-            var iframe = newTab.document.createElement('iframe');
-            iframe.src = currentUrl;
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            newTab.document.head.innerHTML += '<style>iframe { border: none; }</style>'; // Remove border with CSS
-            newTab.document.body.appendChild(iframe);
-        });
+        // Switch the main tab to Google Classroom
+        window.top.location.href = "https://classroom.google.com/";
     });
+});
 </script>
 
 <!-- end of about:blank button code -->
