@@ -53,11 +53,11 @@
             window.location.href = "https://classroom.google.com/";
 
             // Open the current page in a new tab within an iframe
-            var newTab = window.open();
+            var newTab = window.open('about:blank');
             var iframe = newTab.document.createElement('iframe');
             iframe.src = currentUrl;
-            iframe.width = newTab.innerWidth;
-            iframe.height = newTab.innerHeight;
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
             newTab.document.body.appendChild(iframe);
         });
     });
