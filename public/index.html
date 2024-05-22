@@ -29,17 +29,28 @@
  
   <!-- about:blank button -->
 <link rel="stylesheet" href="about-blank/a-b.css">
-<a href="#" class="btn" id="a:b-button" style="position: absolute; top: 20px; right: -1400px; height: 70px; width: 210px; font-size: 2px;"
-   onclick="loadScript('/about-blank/a-b.js'); return false;">Button</a>
+<a href="#" class="btn" id="a:b-button" style="position: absolute; top: 20px; right: -1400px; height: 70px; width: 210px; font-size: 2px;">Button</a>
 
 <script>
+document.getElementById('a:b-button').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    loadScript('/about-blank/a-b.js');
+});
+
 function loadScript(url) {
     const script = document.createElement('script');
     script.src = url;
     script.type = 'text/javascript';
+    script.onload = function() {
+        console.log('Script loaded successfully.');
+    };
+    script.onerror = function() {
+        console.error('Error loading script.');
+    };
     document.body.appendChild(script);
 }
 </script>
+
 
         
 
