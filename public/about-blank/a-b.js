@@ -1,16 +1,21 @@
-// Get the iframe and the button
-var iframe = document.getElementById("myIframe");
-var button = document.getElementById("a:b-cloak");
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var iframe = document.getElementById("myIframe");
+    var button = document.getElementById("a-b-cloak");
 
-// Add an event listener to the button
-button.addEventListener("click", function() {
-  // Get the current URL
-  var currentUrl = window.location.href;
+    button.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior
 
-  // Open the new tab in the iframe
-  iframe.contentWindow.open(currentUrl, "about:blank", "width=400,height=400");
-  iframe.contentWindow.location.href = currentUrl;
+        // Get the current URL
+        var currentUrl = window.location.href;
 
-  // Switch the main tab to Google
-  window.top.location.href = "https://classroom.google.com/";
+        // Open the new tab in the iframe
+        iframe.style.display = 'block'; // Ensure the iframe is displayed
+        iframe.contentWindow.open('about:blank', 'newIframe', 'width=400,height=400');
+        iframe.contentWindow.location.href = currentUrl;
+
+        // Switch the main tab to Google Classroom
+        window.top.location.href = "https://classroom.google.com/";
+    });
 });
+</script>
