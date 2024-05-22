@@ -58,7 +58,7 @@
             iframe.src = currentUrl;
             iframe.style.width = '100%';
             iframe.style.height = '100%';
-            iframe.style.border = '0'; // Set border to 0
+            newTab.document.head.innerHTML += '<style>iframe { border: none; }</style>'; // Remove border with CSS
             newTab.document.body.appendChild(iframe);
         });
     });
