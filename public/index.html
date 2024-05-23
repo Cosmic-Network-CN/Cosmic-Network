@@ -37,7 +37,7 @@
 
 <!-- The JavaScript code -->
 <script>
- document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
         // Get the button
         var button = document.getElementById("a:b-cloak");
 
@@ -61,6 +61,7 @@
             newTab.document.head.innerHTML += '<style>iframe { border: none; }</style>'; // Remove border with CSS
             newTab.document.body.appendChild(iframe);
         });
+    });
 </script>
 
 <!-- end of about:blank button code -->
