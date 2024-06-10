@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://kit.fontawesome.com/52676eb1e5.js" crossorigin="anonymous."></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Cosmic Network | Home</title>
+    <script src="/lf.js"></script>
+    <link rel="shortcut icon" type="x-icon" href="Icons/logo.png">
+    <script async src="https://arc.io/widget.min.js#KpYQhCTB"></script>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+  
+    <style>
+        .fa-house {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body class="home">
+
+    <div class="navbar">
+        <img src="Icons/logo.png" alt="Cosmic Logo" id="logo" style="margin-top: 0.10px; width: 0.1px; height: 0.1px;">
+        <a href="/index.html">
+    <i class="fa-solid fa-house-chimney fa-2xl" style="margin: -500px 0 80px 0;"></i>
+</a>
+
+ 
+  <!-- start of about:blank button code -->
+
+<!-- Ensure the required CSS is linked in your main HTML -->
+<link rel="stylesheet" href="about-blank/a-b.css">
+
+<!-- The button element -->
+<a href="#" class="btn" id="a:b-cloak" style="position: absolute; top: 20px; right: -1455px; transform: scale(0.70);">Button</a>
+
+<!-- The JavaScript code -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the button
+        var button = document.getElementById("a:b-cloak");
+
+        // Add an event listener to the button
+        button.addEventListener("click", function(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+
+            // Get the current URL
+            var currentUrl = window.location.href;
+
+            // Open Google Classroom in the current tab
+            window.location.href = "https://classroom.google.com/";
+
+            // Open the current page in a new tab within an iframe
+            var newTab = window.open('about:blank');
+            var iframe = newTab.document.createElement('iframe');
+            iframe.src = currentUrl;
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            newTab.document.head.innerHTML += '<style>iframe { border: none; }</style>'; // Remove border with CSS
+            newTab.document.body.appendChild(iframe);
+        });
+    });
+</script>
+
+<!-- end of about:blank button code -->
+
+
+</html>
